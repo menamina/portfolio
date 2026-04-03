@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
@@ -11,30 +11,15 @@ function App() {
   return (
     <div className="mainDIV">
       <div className="nav">
-        <div>MENA</div>
+        <div>Mena.</div>
         <div>
-          <Link to="/projects">PROJECTS</Link>
+          <Link to="/portfolio">PORTFOLIO</Link>
+          <Link to="/about">ABOUT</Link>
           <Link to="/contact">CONTACT</Link>
         </div>
       </div>
-      <div className="hero">
-        <div className="LHero">
-          <div>
-            <img></img>
-            <div className="contact">
-              <div onClick={toggleAboutSection}>Who I am</div>
-              {about && (
-                <div>
-                  <div></div>
-                </div>
-              )}
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <div className="RHero"></div>
+      <div className="rendering-routes">
+        <Outlet></Outlet>
       </div>
     </div>
   );
