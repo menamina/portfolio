@@ -1,13 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import { useState } from "react";
 
 function App() {
-  const [about, setAbout] = useState(false);
-
-  function toggleAboutSection() {
-    setAbout((prev) => !prev);
-  }
-
   return (
     <div className="mainDIV">
       <div className="nav">
