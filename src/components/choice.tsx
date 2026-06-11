@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import Blurb from "./blurb";
+import Blurb from "./aboutme";
 
 function Choice({
   title,
@@ -41,7 +41,10 @@ function Choice({
             {title}
           </li>
         ) : (
-          <li style={{ fontSize: "1.2rem" }} onClick={() => viewSet(title)}>
+          <li
+            style={{ fontSize: "1.2rem" }}
+            onClick={() => (view === title ? viewSet("") : viewSet(title))}
+          >
             {title}
           </li>
         )}

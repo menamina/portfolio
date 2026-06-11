@@ -1,11 +1,13 @@
 import { Box } from "@mui/material";
 
-function Blurb() {
+function About() {
   return (
-    <Box sx={{ marginTop: "10px", padding: "10px", backgroundColor: "#f5f5f5" }}>
+    <Box
+      sx={{ marginTop: "10px", padding: "10px", backgroundColor: "#f5f5f5" }}
+    >
       Content goes here
     </Box>
   );
 }
 
-export default Blurb;
+export default About;

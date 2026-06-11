@@ -1,10 +1,16 @@
 import { Container, Box, Typography, CssBaseline } from "@mui/material";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Img from "./imgs/one.jpg";
+
+import Header from "./imgs/one.jpg";
 import Fakeheadshot from "./imgs/two.jpg";
+
 import Choice from "./components/choice";
 import About from "./components/aboutme";
+import Contact from "./components/contact";
+import Projects from "./components/projects";
+import Resume from "./components/resume";
+import Socials from "./components/socials";
 
 const underlines = {
   width: "100%",
@@ -30,7 +36,7 @@ function App() {
               width: "100%",
               objectFit: "cover",
             }}
-            src={Img}
+            src={Header}
             alt="header image of green lilly pads"
           />
         </Box>
@@ -40,7 +46,6 @@ function App() {
             width: "100%",
             height: "100%",
             display: "flex",
-            flexDirection: "column",
             gap: "30px",
             paddingBottom: "75px",
           }}
@@ -82,7 +87,7 @@ function App() {
               </Box>
             </Box>
           </Box>
-          <Box>
+          <Box sx={{ width: "50%" }}>
             {view === "about me" && <About></About>}
             {view === "contact me" && <Contact></Contact>}
             {view === "projects" && <Projects></Projects>}
