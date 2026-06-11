@@ -36,7 +36,7 @@ function Choice({
               fontSize: "1.2rem",
               transform: "scale(1.1)",
             }}
-            onClick={viewSet}
+            onClick={() => (view === title ? viewSet("") : viewSet(title))}
           >
             {title}
           </li>

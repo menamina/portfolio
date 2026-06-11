@@ -46,7 +46,6 @@ function App() {
             width: "100%",
             height: "100%",
             display: "flex",
-            gap: "30px",
             paddingBottom: "75px",
           }}
         >
@@ -70,7 +69,7 @@ function App() {
                 <br></br> one line at a time.
               </Typography>
             </Typography>
-            <Box sx={{ display: "flex", gap: "40px" }}>
+            <Box sx={{ display: "flex", gap: "40px", paddingTop: "30px" }}>
               <Box sx={{ width: "50%" }}>
                 <Typography variant="h5">Overview</Typography>
                 <Box sx={underlines}></Box>
