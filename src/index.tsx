@@ -1,6 +1,7 @@
 import { Container, Box, Grid, Typography, CssBaseline } from "@mui/material";
 import Img from "./imgs/one.jpg";
 import Fakeheadshot from "./imgs/two.jpg";
+import Selection from "./components/selection";
 
 const underlines = {
   width: "300px",
@@ -60,10 +61,15 @@ function App() {
             <Box>
               <Typography variant="h5">Overview</Typography>
               <Box sx={underlines}></Box>
+              <Selection title="about me"></Selection>
+              <Selection title="contact me"></Selection>
             </Box>
             <Box>
               <Typography variant="h5">Portfolio</Typography>
               <Box sx={underlines}></Box>
+              <Selection title="projects"></Selection>
+              <Selection title="resume"></Selection>
+              <Selection title="social media"></Selection>
             </Box>
           </Box>
         </Container>
