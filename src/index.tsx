@@ -3,13 +3,16 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Img from "./imgs/one.jpg";
 import Fakeheadshot from "./imgs/two.jpg";
-import Selection from "./components/selection";
+import Choice from "./components/choice";
 
 const underlines = {
   width: "300px",
   borderBottom: "1px solid #d3d1cb",
   padding: "8px",
 };
+
+const left = ["about me", "contact me"];
+const right = ["projects", "resume", "socials"];
 
 function App() {
   const [view, setView] = useState<string>("");
@@ -64,34 +67,20 @@ function App() {
             <Box>
               <Typography variant="h5">Overview</Typography>
               <Box sx={underlines}></Box>
-              <Selection
-                title="about me"
-                onClick={() => setView("about")}
-              ></Selection>
-              <Selection
-                title="contact me"
-                onClick={() => setView("contact")}
-              ></Selection>
+              {left.map((item) => (
+                <Choice title={item} viewSet={setView} view={view}></Choice>
+              ))}
             </Box>
             <Box>
               <Typography variant="h5">Portfolio</Typography>
               <Box sx={underlines}></Box>
-              <Selection
-                title="projects"
-                onClick={() => setView("projects")}
-              ></Selection>
-              <Selection
-                title="resume"
-                onClick={() => setView("resume")}
-              ></Selection>
-              <Selection
-                title="social media"
-                onClick={() => setView("social")}
-              ></Selection>
+              {right.map((item) => (
+                <Choice title={item} viewSet={setView} view={view}></Choice>
+              ))}
             </Box>
           </Box>
 
-          <Outlet context={{ view }}></Outlet>
+          <Outlet context={{ view }} />
         </Container>
       </Box>
     </>
