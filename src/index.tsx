@@ -1,4 +1,6 @@
-import { Container, Box, Grid, Typography, CssBaseline } from "@mui/material";
+import { Container, Box, Typography, CssBaseline } from "@mui/material";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Img from "./imgs/one.jpg";
 import Fakeheadshot from "./imgs/two.jpg";
 import Selection from "./components/selection";
@@ -10,6 +12,7 @@ const underlines = {
 };
 
 function App() {
+  const [view, setView] = useState<string>("");
   return (
     <>
       <CssBaseline />
@@ -61,17 +64,34 @@ function App() {
             <Box>
               <Typography variant="h5">Overview</Typography>
               <Box sx={underlines}></Box>
-              <Selection title="about me"></Selection>
-              <Selection title="contact me"></Selection>
+              <Selection
+                title="about me"
+                onClick={() => setView("about")}
+              ></Selection>
+              <Selection
+                title="contact me"
+                onClick={() => setView("contact")}
+              ></Selection>
             </Box>
             <Box>
               <Typography variant="h5">Portfolio</Typography>
               <Box sx={underlines}></Box>
-              <Selection title="projects"></Selection>
-              <Selection title="resume"></Selection>
-              <Selection title="social media"></Selection>
+              <Selection
+                title="projects"
+                onClick={() => setView("projects")}
+              ></Selection>
+              <Selection
+                title="resume"
+                onClick={() => setView("resume")}
+              ></Selection>
+              <Selection
+                title="social media"
+                onClick={() => setView("social")}
+              ></Selection>
             </Box>
           </Box>
+
+          <Outlet context={{ view }}></Outlet>
         </Container>
       </Box>
     </>

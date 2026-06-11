@@ -1,6 +1,9 @@
-import { Container, Box, Grid, Typography, CssBaseline } from "@mui/material";
+import { Box } from "@mui/material";
+import { useOutletContext } from "react-router-dom";
+import Blurb from "./blurb";
 
-function Selection({ title, view }: { title: string; view: "string" }) {
+function Selection({ title }: { title: string }) {
+  const { view } = useOutletContext<{ view: string }>();
   return (
     <>
       <Box
@@ -23,7 +26,8 @@ function Selection({ title, view }: { title: string; view: "string" }) {
       >
         <li style={{ fontSize: "1.2rem" }}>{title}</li>
       </Box>
-      {}
+
+      {view === title ? <Blurb view={title}></Blurb> : null}
     </>
   );
 }
