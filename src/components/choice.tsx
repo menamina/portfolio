@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import Blurb from "./aboutme";
 
 function Choice({
   title,
