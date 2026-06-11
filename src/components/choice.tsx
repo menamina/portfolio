@@ -32,7 +32,10 @@ function Choice({
       >
         {title === view ? (
           <li
-            style={{ fontSize: "1.2rem", transform: "scale(1.2)" }}
+            style={{
+              fontSize: "1.2rem",
+              transform: "scale(1.1)",
+            }}
             onClick={viewSet}
           >
             {title}
@@ -43,7 +46,6 @@ function Choice({
           </li>
         )}
       </Box>
-      {view === title && <Blurb />}
     </>
   );
 }

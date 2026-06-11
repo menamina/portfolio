@@ -4,9 +4,10 @@ import { Outlet } from "react-router-dom";
 import Img from "./imgs/one.jpg";
 import Fakeheadshot from "./imgs/two.jpg";
 import Choice from "./components/choice";
+import About from "./components/aboutme";
 
 const underlines = {
-  width: "300px",
+  width: "100%",
   borderBottom: "1px solid #d3d1cb",
   padding: "8px",
 };
@@ -44,40 +45,49 @@ function App() {
             paddingBottom: "75px",
           }}
         >
-          <Box sx={{ width: "inherit" }}>
-            <img
-              src={Fakeheadshot}
-              alt="Mena Jackson picture"
-              style={{
-                height: "400px",
-                width: "400px",
-                objectFit: "cover",
-                borderRadius: "100%",
-              }}
-            />
-          </Box>
-          <Typography>
-            <Typography variant="h3">Mena Jackson. </Typography>
-            <Typography variant="h6">
-              <br></br> Full stack web developer bringing visions to life
-              <br></br> one line at a time.
+          <Box sx={{ width: "50%" }}>
+            <Box sx={{ width: "100%" }}>
+              <img
+                src={Fakeheadshot}
+                alt="Mena Jackson picture"
+                style={{
+                  height: "400px",
+                  width: "400px",
+                  objectFit: "cover",
+                  borderRadius: "100%",
+                }}
+              />
+            </Box>
+            <Typography>
+              <Typography variant="h3">Mena Jackson. </Typography>
+              <Typography variant="h6">
+                <br></br> Full stack web developer bringing visions to life
+                <br></br> one line at a time.
+              </Typography>
             </Typography>
-          </Typography>
-          <Box sx={{ display: "flex", gap: "40px" }}>
-            <Box>
-              <Typography variant="h5">Overview</Typography>
-              <Box sx={underlines}></Box>
-              {left.map((item) => (
-                <Choice title={item} viewSet={setView} view={view}></Choice>
-              ))}
+            <Box sx={{ display: "flex", gap: "40px" }}>
+              <Box sx={{ width: "50%" }}>
+                <Typography variant="h5">Overview</Typography>
+                <Box sx={underlines}></Box>
+                {left.map((item) => (
+                  <Choice title={item} viewSet={setView} view={view}></Choice>
+                ))}
+              </Box>
+              <Box sx={{ width: "50%" }}>
+                <Typography variant="h5">Portfolio</Typography>
+                <Box sx={underlines}></Box>
+                {right.map((item) => (
+                  <Choice title={item} viewSet={setView} view={view}></Choice>
+                ))}
+              </Box>
             </Box>
-            <Box>
-              <Typography variant="h5">Portfolio</Typography>
-              <Box sx={underlines}></Box>
-              {right.map((item) => (
-                <Choice title={item} viewSet={setView} view={view}></Choice>
-              ))}
-            </Box>
+          </Box>
+          <Box>
+            {view === "about me" && <About></About>}
+            {view === "contact me" && <Contact></Contact>}
+            {view === "projects" && <Projects></Projects>}
+            {view === "resume" && <Resume></Resume>}
+            {view === "socials" && <Socials></Socials>}
           </Box>
 
           <Outlet context={{ view }} />
