@@ -27,9 +27,7 @@ function App() {
     <>
       <CssBaseline />
       <Box sx={{ width: "100%", height: "100%" }}>
-        <Box
-          sx={{ height: "300px", backgroundColor: "green", overflow: "hidden" }}
-        >
+        <Box sx={{ height: "175px", overflow: "hidden" }}>
           <img
             style={{
               height: "100%",
@@ -46,6 +44,7 @@ function App() {
             width: "100%",
             height: "100%",
             display: "flex",
+            paddingTop: "50px",
             paddingBottom: "75px",
           }}
         >
@@ -55,8 +54,8 @@ function App() {
                 src={Fakeheadshot}
                 alt="Mena Jackson picture"
                 style={{
-                  height: "400px",
-                  width: "400px",
+                  height: "300px",
+                  width: "300px",
                   objectFit: "cover",
                   borderRadius: "100%",
                 }}
@@ -86,7 +85,7 @@ function App() {
               </Box>
             </Box>
           </Box>
-          <Box sx={{ width: "50%", display: "flex", paddingTop: "50px" }}>
+          <Box sx={{ width: "50%", display: "flex" }}>
             {view === "about me" && <About></About>}
             {view === "contact me" && <Contact></Contact>}
             {view === "projects" && <Projects></Projects>}
