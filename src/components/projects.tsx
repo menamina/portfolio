@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 
 function Projects() {
   return (
-    <Box sx={{}}>
-      <Typography>Bunie.</Typography>
+    <Box>
+      <Typography>Bunie. 🐰</Typography>
       <Typography>A semi-social media cosmetics tracking app.</Typography>
       <Typography>
         Track your cosmetic inventory and usage with Bunie and share your

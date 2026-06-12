@@ -7,10 +7,10 @@ import Fakeheadshot from "./imgs/two.jpg";
 
 import Choice from "./components/choice";
 import About from "./components/aboutme";
-import Contact from "./components/contact";
+import Contact from "./components/socials";
 import Projects from "./components/projects";
 import Resume from "./components/resume";
-import Socials from "./components/socials";
+import Socials from "./components/contact";
 
 const underlines = {
   width: "100%",
@@ -86,7 +86,7 @@ function App() {
               </Box>
             </Box>
           </Box>
-          <Box sx={{ width: "50%" }}>
+          <Box sx={{ width: "50%", display: "flex", paddingTop: "50px" }}>
             {view === "about me" && <About></About>}
             {view === "contact me" && <Contact></Contact>}
             {view === "projects" && <Projects></Projects>}
