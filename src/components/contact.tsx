@@ -18,7 +18,7 @@ function Contact() {
           "& a": { color: "black", textDecoration: "none" },
         }}
       >
-        <img src={Email} alt="email image" style={imgcss}></img>
+        <img src={Email} alt="email image" style={imgcss} />
         <Typography>dayjacs03@gmail.com</Typography>
       </Box>
     </Box>
