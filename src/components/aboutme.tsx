@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 function About() {
   return (
-    <Box sx={{ padding: "10px", backgroundColor: "#f5f5f5" }}>
+    <Box sx={{}}>
       <Typography>
         Former pre school teacher turned developer. For a year I have taught
         myself front and backend web development through various resources with

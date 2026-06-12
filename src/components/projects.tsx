@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 function Projects() {
   return (
-    <Box sx={{ padding: "10px", backgroundColor: "#f5f5f5" }}>
+    <Box sx={{}}>
       <Typography>Bunie.</Typography>
       <Typography>A semi-social media cosmetics tracking app.</Typography>
       <Typography>

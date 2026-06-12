@@ -17,7 +17,13 @@ function Contact() {
       <Box>
         <Box
           className="linksToContact"
-          sx={{ display: "flex", flexDirection: "column", gap: "15px" }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "15px",
+            "& a:visited": { color: "black" },
+            "& a": { color: "black", textDecoration: "none" },
+          }}
         >
           <Link
             to="https://github.com/menamina"
