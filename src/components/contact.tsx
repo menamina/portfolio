@@ -1,27 +1,20 @@
+import { Box, Typography } from "@mui/material";
+import Email from "../imgs/email.svg";
+
+const imgcss = {
+  width: "50px",
+};
+
 function Contact() {
   return (
-    <div className="contactDIV">
-      <div>
-        If you want to get a hold of me personally the choice of method is yours
-      </div>
-      <div>
-        <img src="" alt="mena's picture"></img>
-        <div className="linksToContact">
-          <div>
-            <img src="" alt="email image"></img>
-            <div>dayjacs03@gmail.com</div>
-          </div>
-          <Link to="">
-            <img src="" alt="mena's github profile"></img>
-          </Link>
-          <div>
-            <Link to="">
-              <img src="" alt="mena's linkedin profile"></img>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Box className="contactDIV">
+      <Typography>Email me!</Typography>
+
+      <Box className="linksToContact">
+        <img src={Email} alt="email image" style={imgcss}></img>
+        <Typography>dayjacs03@gmail.com</Typography>
+      </Box>
+    </Box>
   );
 }
 
