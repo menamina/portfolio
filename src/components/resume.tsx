@@ -18,7 +18,7 @@ function Resume() {
             transform: "scale(1.1)",
             boxShadow: "0px 20px 30px 0px gray",
           },
-          "& img:nth-of-type(2):hover": {
+          "& > img:hover": {
             filter: "blur(1px)",
           },
         }}
