@@ -7,11 +7,10 @@ const imgcss = {
 
 function Contact() {
   return (
-    <Box className="contactDIV">
+    <Box>
       <Typography>Email me!</Typography>
 
       <Box
-        className="linksToContact"
         sx={{
           display: "flex",
           gap: "15px",
