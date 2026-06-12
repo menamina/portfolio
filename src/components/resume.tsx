@@ -14,12 +14,11 @@ function Resume() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          ...(enlarge && { position: "relative" }),
           "& a:hover": {
             transform: "scale(1.1)",
             boxShadow: "0px 20px 30px 0px gray",
           },
-          "& img:hover": {
+          "& img:nth-of-type(2):hover": {
             filter: "blur(1px)",
           },
         }}
@@ -40,15 +39,24 @@ function Resume() {
       </Box>
 
       {enlarge && (
-        <Box sx={{ position: "absolute" }}>
+        <Box
+          sx={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "80vw",
+            height: "80vh",
+            display: "flex",
+            bgcolor: "yellow",
+          }}
+        >
           <button type="button" onClick={() => setEnlarge(false)}>
             X
           </button>
-          <img
-            src={Res}
-            alt="mena's resume enlarge"
-            style={{ width: "80vw", height: "80vh" }}
-          />
+          <Box sx={{ width: "50%" }}>
+            <img src={Res} alt="mena's resume enlarge" />
+          </Box>
         </Box>
       )}
     </Box>
