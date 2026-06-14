@@ -7,10 +7,10 @@ import Fakeheadshot from "./imgs/two.jpg";
 
 import Choice from "./components/choice";
 import About from "./components/aboutme";
-import Contact from "./components/socials";
+import Contact from "./components/contact";
 import Projects from "./components/projects";
 import Resume from "./components/resume";
-import Socials from "./components/contact";
+import Socials from "./components/socials";
 
 const underlines = {
   width: "100%",
@@ -44,7 +44,8 @@ function App() {
             width: "100%",
             height: "100%",
             display: "flex",
-            flexDirection: { xs: "column" },
+
+            flexDirection: { xs: "column", md: "row" },
             paddingTop: "50px",
             paddingBottom: "75px",
           }}
