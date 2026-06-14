@@ -53,10 +53,14 @@ function App() {
           <Box
             sx={{
               width: { xs: "100%", md: "50%" },
-              "& > div:not(:last-child)": {
+              "& > div": {
                 display: "flex",
+                gap: "25px",
                 flexDirection: "column",
                 alignItems: "center",
+              },
+              "& > div:last-child": {
+                flexDirection: "row",
               },
             }}
           >
