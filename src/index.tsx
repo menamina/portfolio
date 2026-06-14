@@ -52,7 +52,7 @@ function App() {
         >
           <Box
             sx={{
-              width: { xs: "100%", md: "50%" },
+              width: { xs: "100%", sm: "50%" },
               "& > div": {
                 display: "flex",
                 gap: "25px",
@@ -95,6 +95,7 @@ function App() {
                 display: "flex",
                 gap: "40px",
                 paddingTop: "30px",
+                height: "260px",
               }}
             >
               <Box
@@ -103,6 +104,8 @@ function App() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  height: "100%",
+                  justifyContent: "space-between",
                 }}
               >
                 <Typography variant="h5">Overview</Typography>
@@ -117,6 +120,7 @@ function App() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  height: "100%",
                 }}
               >
                 <Typography variant="h5">Portfolio</Typography>
