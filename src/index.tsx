@@ -44,12 +44,29 @@ function App() {
             width: "100%",
             height: "100%",
             display: "flex",
+            flexDirection: { xs: "column" },
             paddingTop: "50px",
             paddingBottom: "75px",
           }}
         >
-          <Box sx={{ width: "50%" }}>
-            <Box sx={{ width: "100%" }}>
+          <Box
+            sx={{
+              width: { xs: "100%", md: "50%" },
+              "& > div:not(:last-child)": {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              },
+            }}
+          >
+            <Box
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
               <img
                 src={Fakeheadshot}
                 alt="Mena Jackson picture"
@@ -61,22 +78,42 @@ function App() {
                 }}
               />
             </Box>
-            <Typography>
+            <Box>
               <Typography variant="h3">Mena Jackson. </Typography>
               <Typography variant="h6">
                 <br></br> Full stack web developer bringing visions to life
                 <br></br> one line at a time.
               </Typography>
-            </Typography>
-            <Box sx={{ display: "flex", gap: "40px", paddingTop: "30px" }}>
-              <Box sx={{ width: "50%" }}>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                gap: "40px",
+                paddingTop: "30px",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "50%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
                 <Typography variant="h5">Overview</Typography>
                 <Box sx={underlines}></Box>
                 {left.map((item) => (
                   <Choice title={item} viewSet={setView} view={view}></Choice>
                 ))}
               </Box>
-              <Box sx={{ width: "50%" }}>
+              <Box
+                sx={{
+                  width: "50%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
                 <Typography variant="h5">Portfolio</Typography>
                 <Box sx={underlines}></Box>
                 {right.map((item) => (
@@ -85,7 +122,7 @@ function App() {
               </Box>
             </Box>
           </Box>
-          <Box sx={{ width: "50%", display: "flex" }}>
+          <Box sx={{ width: { xs: "100%", md: "50%" }, display: "flex" }}>
             {view === "about me" && <About></About>}
             {view === "contact me" && <Contact></Contact>}
             {view === "projects" && <Projects></Projects>}
