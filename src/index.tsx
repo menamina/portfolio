@@ -40,19 +40,21 @@ function App() {
         </Box>
 
         <Container
+          className="HELLLOOO?"
           sx={{
             width: "100%",
             height: "100%",
             display: "flex",
-
+            gap: "50px",
             flexDirection: { xs: "column", md: "row" },
             paddingTop: "50px",
             paddingBottom: "75px",
           }}
         >
           <Box
+            className="hello?"
             sx={{
-              width: { xs: "100%", sm: "50%" },
+              width: { xs: "100%", sm: "100%", md: "50%" },
               "& > div": {
                 display: "flex",
                 gap: "25px",
@@ -105,7 +107,6 @@ function App() {
                   flexDirection: "column",
                   alignItems: "center",
                   height: "100%",
-                  justifyContent: "space-between",
                 }}
               >
                 <Typography variant="h5">Overview</Typography>
@@ -119,6 +120,7 @@ function App() {
                   width: "50%",
                   display: "flex",
                   flexDirection: "column",
+
                   alignItems: "center",
                   height: "100%",
                 }}
@@ -131,7 +133,14 @@ function App() {
               </Box>
             </Box>
           </Box>
-          <Box sx={{ width: { xs: "100%", md: "50%" }, display: "flex" }}>
+          <Box
+            sx={{
+              width: { xs: "100%", md: "50%" },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             {view === "about me" && <About></About>}
             {view === "contact me" && <Contact></Contact>}
             {view === "projects" && <Projects></Projects>}
