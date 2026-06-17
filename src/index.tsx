@@ -2,8 +2,8 @@ import { Container, Box, Typography, CssBaseline } from "@mui/material";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import Header from "./imgs/one.jpg";
-import Fakeheadshot from "./imgs/two.jpg";
+import Header from "./imgs/flou.jpeg";
+import Me from "./imgs/me.jpeg";
 
 import Choice from "./components/choice";
 import About from "./components/aboutme";
@@ -40,7 +40,6 @@ function App() {
         </Box>
 
         <Container
-          className="HELLLOOO?"
           sx={{
             width: "100%",
             height: "100%",
@@ -52,7 +51,6 @@ function App() {
           }}
         >
           <Box
-            className="hello?"
             sx={{
               width: { xs: "100%", sm: "100%", md: "50%" },
               "& > div": {
@@ -75,7 +73,7 @@ function App() {
               }}
             >
               <img
-                src={Fakeheadshot}
+                src={Me}
                 alt="Mena Jackson picture"
                 style={{
                   height: "300px",
@@ -85,11 +83,11 @@ function App() {
                 }}
               />
             </Box>
-            <Box>
+            <Box sx={{ paddingTop: "15px" }}>
               <Typography variant="h3">Mena Jackson. </Typography>
               <Typography variant="h6">
-                <br></br> Full stack web developer bringing visions to life
-                <br></br> one line at a time.
+                <br></br> Full stack web developer bringing visions to life one
+                line at a time.
               </Typography>
             </Box>
             <Box

@@ -40,7 +40,7 @@ function Contact() {
             <Typography>Linkedin</Typography>
           </Link>
           <Link
-            to="https://personall.com"
+            to="https://codingmuse.me"
             style={{ display: "flex", gap: "20px" }}
           >
             <img src={Blog} alt="" style={imgcss} />
