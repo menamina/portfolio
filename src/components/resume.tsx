@@ -3,11 +3,7 @@ import Res from "../imgs/resume.png";
 import Download from "../imgs/download.svg";
 import ResPDF from "../imgs/resume.pdf";
 
-import { useState } from "react";
-
 function Resume() {
-  const [enlarge, setEnlarge] = useState<boolean>(false);
-
   return (
     <Box sx={{ width: "100%" }}>
       <Box
@@ -30,35 +26,8 @@ function Resume() {
         >
           <img style={{ width: "30px" }} src={Download} alt="download image" />
         </a>
-        <img
-          style={{ width: "100%" }}
-          src={Res}
-          alt="mena's resume"
-          onClick={() => setEnlarge(true)}
-        />
+        <img style={{ width: "100%" }} src={Res} alt="mena's resume" />
       </Box>
-
-      {enlarge && (
-        <Box
-          sx={{
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "80vw",
-            height: "80vh",
-            display: "flex",
-            bgcolor: "yellow",
-          }}
-        >
-          <button type="button" onClick={() => setEnlarge(false)}>
-            X
-          </button>
-          <Box sx={{ width: "50%" }}>
-            <img src={Res} alt="mena's resume enlarge" />
-          </Box>
-        </Box>
-      )}
     </Box>
   );
 }
