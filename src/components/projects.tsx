@@ -1,6 +1,27 @@
 import { Box, Typography } from "@mui/material";
+import ImgCarousel from "./imgCarousel";
+
+import Feed from "../appIMGS/feed.png";
+import Profile from "../appIMGS/profile.png";
+import Settings from "../appIMGS/set.png";
+import Pass from "../appIMGS/pass.png";
+import Wrongpass from "../appIMGS/wrongpass.png";
+import Edit from "../appIMGS/edit.png";
+import Comment from "../appIMGS/comment.png";
+import Inven from "../appIMGS/inven.png";
 
 function Projects() {
+  const bunieIMGS = [
+    Feed,
+    Profile,
+    Settings,
+    Pass,
+    Wrongpass,
+    Edit,
+    Comment,
+    Inven,
+  ];
+
   return (
     <Box>
       <Typography>Bunie. 🐰</Typography>
@@ -27,6 +48,8 @@ function Projects() {
         <li>Typescript</li>
         <li>Tanstack for caching infinite scrolling</li>
       </Box>
+
+      <ImgCarousel imgs={bunieIMGS} />
     </Box>
   );
 }

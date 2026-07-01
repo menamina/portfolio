@@ -1,21 +1,33 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import Feed from "../appIMGS/feed.png";
-import Profile from "../appIMGS/profile.png";
-import Settings from "../appIMGS/set.png";
-import Pass from "../appIMGS/pass.png";
-import Wrongpass from "../appIMGS/wrongpass.png";
-import Edit from "../appIMGS/edit.png";
-import Comment from "../appIMGS/comment.png";
-import Inven from "../appIMGS/inven.png";
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
-function ImgCarousel({ imgs }: { imgs: string[] }) {
+function ImgCarousel({ imgs }) {
   return (
-    <Carousel swipeable={true}>
+    <Carousel
+      swipeable={true}
+      showDots={true}
+      infinite={true}
+      transitionDuration={500}
+      responsive={responsive}
+    >
       {imgs.map((img, index) => (
         <div key={index}>
-          <img src={img} />
+          <img src={img} alt={`Slide ${index + 1}`} />
         </div>
       ))}
     </Carousel>
