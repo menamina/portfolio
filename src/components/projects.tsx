@@ -23,7 +23,7 @@ function Projects() {
   ];
 
   return (
-    <Box>
+    <Box sx={{ width: "100%" }}>
       <Typography>Bunie. 🐰</Typography>
       <Typography>A semi-social media cosmetics tracking app.</Typography>
       <Typography>
