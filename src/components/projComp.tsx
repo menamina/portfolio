@@ -23,18 +23,34 @@ function Project({
   const [open, setOpen] = useState(false);
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "Flex",
+        flexDirection: "column",
+        gap: "30px",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
           gap: "20px",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "50%",
         }}
       >
-        <Typography>{title}</Typography>
+        <Typography
+          sx={{
+            fontSize: "1.3rem",
+          }}
+        >
+          {title}
+        </Typography>
         <Box onClick={() => setOpen((prev) => !prev)}>
           <img
             style={{
-              width: "100px",
+              width: "40px",
+              cursor: "pointer",
             }}
             src={!open ? Open : Close}
             alt={!open ? "open project" : "close project"}
@@ -42,7 +58,7 @@ function Project({
         </Box>
       </Box>
       {open && (
-        <>
+        <Box>
           <Typography>{description1}</Typography>
           {description2 && <Typography>{description2}</Typography>}
           <Typography>Build:</Typography>
@@ -60,7 +76,7 @@ function Project({
           </Box>
 
           <ImgCarousel imgs={pics} />
-        </>
+        </Box>
       )}
     </Box>
   );

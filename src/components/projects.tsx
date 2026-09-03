@@ -50,14 +50,13 @@ const sanTech = [
 ];
 
 function Projects() {
-
   return (
     <Box
       sx={{
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        gap: "40px",
+        gap: "50px",
       }}
     >
       <Project
@@ -68,7 +67,7 @@ function Projects() {
         pics={bunieIMGS}
       />
       <Project
-        title="Report builder for a non profit organization (Digital Aid Seattle)"
+        title="Report builder (Digital Aid Seattle)"
         description1="Fullstack application for legal case management that syncs data from one database (MyCase) to another (Azure)"
         description2={null}
         tech={sanTech}

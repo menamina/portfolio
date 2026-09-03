@@ -35,7 +35,7 @@ function App() {
               objectFit: "cover",
             }}
             src={Header}
-            alt="header image of green lilly pads"
+            alt="header image of flowers"
           />
         </Box>
 
@@ -83,70 +83,80 @@ function App() {
                 }}
               />
             </Box>
-            <Box sx={{ paddingTop: "15px" }}>
-              <Typography variant="h3">Mena Jackson. </Typography>
-              <Typography variant="h6">
-                <br></br> Full stack web developer bringing visions to life one
-                line at a time.
-              </Typography>
-            </Box>
+
             <Box
               sx={{
                 display: "flex",
-                gap: "40px",
-                paddingTop: "30px",
-                height: "260px",
+                justifySelf: "center",
+                width: "300px",
               }}
             >
-              <Box
-                sx={{
-                  width: "50%",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  height: "100%",
-                }}
-              >
-                <Typography variant="h5">Overview</Typography>
-                <Box sx={underlines}></Box>
-                {left.map((item) => (
-                  <Choice title={item} viewSet={setView} view={view}></Choice>
-                ))}
+              <Box sx={{ paddingTop: "15px", &Typography: textAlign: "center" }}>
+                <Typography variant="h4">Mena Jackson </Typography>
+                <Typography variant="h6">
+                  <br></br> Full stack JavaScript web developer bringing visions
+                  to life one line at a time.
+                </Typography>
               </Box>
               <Box
                 sx={{
-                  width: "50%",
                   display: "flex",
-                  flexDirection: "column",
-
-                  alignItems: "center",
-                  height: "100%",
+                  gap: "40px",
+                  paddingTop: "30px",
+                  height: "260px",
                 }}
               >
-                <Typography variant="h5">Portfolio</Typography>
-                <Box sx={underlines}></Box>
-                {right.map((item) => (
-                  <Choice title={item} viewSet={setView} view={view}></Choice>
-                ))}
+                <Box
+                  sx={{
+                    width: "50%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    height: "100%",
+                  }}
+                >
+                  <Typography variant="h5">Overview</Typography>
+                  <Box sx={underlines}></Box>
+                  {left.map((item) => (
+                    <Choice title={item} viewSet={setView} view={view}></Choice>
+                  ))}
+                </Box>
+                <Box
+                  sx={{
+                    width: "50%",
+                    display: "flex",
+                    flexDirection: "column",
+
+                    alignItems: "center",
+                    height: "100%",
+                  }}
+                >
+                  <Typography variant="h5">Portfolio</Typography>
+                  <Box sx={underlines}></Box>
+                  {right.map((item) => (
+                    <Choice title={item} viewSet={setView} view={view}></Choice>
+                  ))}
+                </Box>
               </Box>
             </Box>
-          </Box>
-          <Box
-            sx={{
-              width: { xs: "100%", md: "50%" },
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            {view === "about me" && <About></About>}
-            {view === "contact me" && <Contact></Contact>}
-            {view === "projects" && <Projects></Projects>}
-            {view === "resume" && <Resume></Resume>}
-            {view === "socials" && <Socials></Socials>}
-          </Box>
+            <Box
+              sx={{
+                width: { xs: "100%", md: "50%" },
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {view === "about me" && <About></About>}
+              {view === "contact me" && <Contact></Contact>}
+              {view === "projects" && <Projects></Projects>}
+              {view === "resume" && <Resume></Resume>}
+              {view === "socials" && <Socials></Socials>}
+            </Box>
+            </Box>
 
-          <Outlet context={{ view }} />
+            <Outlet context={{ view }} />
+
         </Container>
       </Box>
     </>
