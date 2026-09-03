@@ -1,14 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import ImgCarousel from "./imgCarousel";
 
-import Feed from "../appIMGS/feed.png";
-import Profile from "../appIMGS/profile.png";
-import Settings from "../appIMGS/set.png";
-import Pass from "../appIMGS/pass.png";
-import Wrongpass from "../appIMGS/wrongpass.png";
-import Edit from "../appIMGS/edit.png";
-import Comment from "../appIMGS/comment.png";
-import Inven from "../appIMGS/inven.png";
+import Feed from "../bunieIMGS/feed.png";
+import Profile from "../bunieIMGS/profile.png";
+import Settings from "../bunieIMGS/set.png";
+import Pass from "../bunieIMGS/pass.png";
+import Wrongpass from "../bunieIMGS/wrongpass.png";
+import Edit from "../bunieIMGS/edit.png";
+import Comment from "../bunieIMGS/comment.png";
+import Inven from "../bunieIMGS/inven.png";
 
 function Projects() {
   const bunieIMGS = [
