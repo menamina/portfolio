@@ -153,7 +153,10 @@ function App() {
             {view === "socials" && <Socials></Socials>}
           </Box>
 
-          <Outlet context={{ view }} />
+          <Outlet
+            style={{ width: { xs: "100%", sm: "100%", md: "50%" } }}
+            context={{ view }}
+          />
         </Container>
       </Box>
     </>

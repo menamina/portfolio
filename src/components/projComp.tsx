@@ -26,6 +26,8 @@ function Project({
     <Box
       sx={{
         display: "Flex",
+
+        alignItems: "center",
         flexDirection: "column",
         gap: "30px",
       }}
