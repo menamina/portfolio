@@ -86,77 +86,74 @@ function App() {
 
             <Box
               sx={{
-                display: "flex",
-                justifySelf: "center",
+                paddingTop: "15px",
                 width: "300px",
+                justifySelf: "center",
               }}
             >
-              <Box sx={{ paddingTop: "15px", &Typography: textAlign: "center" }}>
-                <Typography variant="h4">Mena Jackson </Typography>
-                <Typography variant="h6">
-                  <br></br> Full stack JavaScript web developer bringing visions
-                  to life one line at a time.
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: "40px",
-                  paddingTop: "30px",
-                  height: "260px",
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "50%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    height: "100%",
-                  }}
-                >
-                  <Typography variant="h5">Overview</Typography>
-                  <Box sx={underlines}></Box>
-                  {left.map((item) => (
-                    <Choice title={item} viewSet={setView} view={view}></Choice>
-                  ))}
-                </Box>
-                <Box
-                  sx={{
-                    width: "50%",
-                    display: "flex",
-                    flexDirection: "column",
-
-                    alignItems: "center",
-                    height: "100%",
-                  }}
-                >
-                  <Typography variant="h5">Portfolio</Typography>
-                  <Box sx={underlines}></Box>
-                  {right.map((item) => (
-                    <Choice title={item} viewSet={setView} view={view}></Choice>
-                  ))}
-                </Box>
-              </Box>
+              <Typography variant="h4">Mena Jackson </Typography>
+              <Typography variant="h6" sx={{ textAlign: "justify" }}>
+                Full stack JavaScript web developer bringing visions to life one
+                line at a time.
+              </Typography>
             </Box>
             <Box
               sx={{
-                width: { xs: "100%", md: "50%" },
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                gap: "40px",
+                paddingTop: "30px",
+                height: "260px",
               }}
             >
-              {view === "about me" && <About></About>}
-              {view === "contact me" && <Contact></Contact>}
-              {view === "projects" && <Projects></Projects>}
-              {view === "resume" && <Resume></Resume>}
-              {view === "socials" && <Socials></Socials>}
-            </Box>
-            </Box>
+              <Box
+                sx={{
+                  width: "50%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <Typography variant="h5">Overview</Typography>
+                <Box sx={underlines}></Box>
+                {left.map((item) => (
+                  <Choice title={item} viewSet={setView} view={view}></Choice>
+                ))}
+              </Box>
+              <Box
+                sx={{
+                  width: "50%",
+                  display: "flex",
+                  flexDirection: "column",
 
-            <Outlet context={{ view }} />
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <Typography variant="h5">Portfolio</Typography>
+                <Box sx={underlines}></Box>
+                {right.map((item) => (
+                  <Choice title={item} viewSet={setView} view={view}></Choice>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              width: { xs: "100%", md: "50%" },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {view === "about me" && <About></About>}
+            {view === "contact me" && <Contact></Contact>}
+            {view === "projects" && <Projects></Projects>}
+            {view === "resume" && <Resume></Resume>}
+            {view === "socials" && <Socials></Socials>}
+          </Box>
 
+          <Outlet context={{ view }} />
         </Container>
       </Box>
     </>

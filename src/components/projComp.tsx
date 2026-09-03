@@ -46,7 +46,9 @@ function Project({
         >
           {title}
         </Typography>
-        <Box onClick={() => setOpen((prev) => !prev)}>
+        <Box onClick={() => setOpen((prev) => !prev)} style={{
+          hover:   transform: "scale(1.1)",
+        }}>
           <img
             style={{
               width: "40px",
