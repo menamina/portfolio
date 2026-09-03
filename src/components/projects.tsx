@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import Project from "./projComp";
 
 import Feed from "../bunieIMGS/feed.png";
@@ -50,7 +51,14 @@ function Projects() {
   ];
 
   return (
-    <>
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        gap: "40px",
+      }}
+    >
       <Project
         title="Bunie. 🐰"
         description1="A semi-social media cosmetics tracking app."
@@ -65,7 +73,7 @@ function Projects() {
         tech={sanTech}
         pics={sanIMGS}
       />
-    </>
+    </Box>
   );
 }
 
