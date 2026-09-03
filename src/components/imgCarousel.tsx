@@ -27,8 +27,11 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
 
   return (
     <Box
-      onClick={() => (modal ? setModal(false) : null)}
-      style={{ width: "100%", position: modal ? "relative" : null }}
+      onClick={() => modal && setModal(false)}
+      sx={{
+        width: "100%",
+        ...(modal && { position: "relative" }),
+      }}
     >
       {!modal && (
         <Box
@@ -43,7 +46,6 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
               opacity: 0,
               transition: "opacity 0.3s ease",
               zIndex: 1,
-              pointerEvents: "none",
             },
             "&:hover .overlay-magnify": {
               opacity: 5,
@@ -71,8 +73,12 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
               </div>
             ))}
           </MultiCarousel>
-          <Button disabled={modal} onClick={() => setModal(true)}>
+          <Box>
             <img
+              onClick={() => {
+                !modal && setModal(true);
+                console.log("clicked");
+              }}
               className="overlay-magnify"
               src={Magnify}
               alt="magnify"
@@ -82,32 +88,48 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
                 height: "100%",
               }}
             />
-          </Button>
+          </Box>
         </Box>
       )}
 
       {modal && (
-        <Box sx={{ position: "absolute", zIndex: "5" }}>
-          <MultiCarousel
-            swipeable={true}
-            infinite={true}
-            transitionDuration={500}
-            responsive={responsive}
-            containerClass="carousel-container"
-            itemClass="carousel-item"
-          >
-            {imgs.map((img, index) => (
-              <div key={index} style={{ padding: "0 10px" }}>
-                <img
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </div>
-            ))}
-          </MultiCarousel>
+        <Box
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            zIndex: 9999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "20px",
+          }}
+        >
+          <Box sx={{ maxWidth: "1200px", width: "100%" }}>
+            <MultiCarousel
+              swipeable={true}
+              infinite={true}
+              transitionDuration={500}
+              responsive={responsive}
+              containerClass="carousel-container"
+              itemClass="carousel-item"
+            >
+              {imgs.map((img, index) => (
+                <div key={index} style={{ padding: "0 10px" }}>
+                  <img
+                    src={img}
+                    alt={`Slide ${index + 1}`}
+                    style={{
+                      width: "100%",
+                    }}
+                  />
+                </div>
+              ))}
+            </MultiCarousel>
+          </Box>
         </Box>
       )}
     </Box>
