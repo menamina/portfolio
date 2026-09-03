@@ -27,10 +27,8 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
 
   return (
     <Box
-      onClick={() => modal && setModal(false)}
       sx={{
         width: "100%",
-        ...(modal && { position: "relative" }),
       }}
     >
       {!modal && (
@@ -94,21 +92,25 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
 
       {modal && (
         <Box
+          onClick={() => modal && setModal(false)}
           sx={{
             position: "fixed",
             top: 0,
             left: 0,
             width: "100vw",
             height: "100vh",
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            zIndex: 9999,
+            backgroundColor: "rgba(49, 47, 47, 0.61)",
+            zIndex: 5,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             padding: "20px",
           }}
         >
-          <Box sx={{ maxWidth: "1200px", width: "100%" }}>
+          <Box
+            onClick={(e) => e.stopPropagation()}
+            sx={{ maxWidth: "1200px", width: "100%" }}
+          >
             <MultiCarousel
               swipeable={true}
               infinite={true}
