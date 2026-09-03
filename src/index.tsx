@@ -2,7 +2,7 @@ import { Container, Box, Typography, CssBaseline } from "@mui/material";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import Header from "./imgs/flou.jpeg";
+import Header from "./imgs/header1.jpeg";
 import Me from "./imgs/mena.png";
 
 import Choice from "./components/choice";
