@@ -26,7 +26,10 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
   const [modal, setModal] = useState(false);
 
   return (
-    <Box style={{ width: "100%" }}>
+    <Box
+      onClick={() => (modal ? setModal(false) : null)}
+      style={{ width: "100%", position: modal ? "relative" : null }}
+    >
       {!modal && (
         <Box
           sx={{
@@ -84,7 +87,7 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
       )}
 
       {modal && (
-        <Box>
+        <Box sx={{ position: "absolute", zIndex: "5" }}>
           <MultiCarousel
             swipeable={true}
             infinite={true}
