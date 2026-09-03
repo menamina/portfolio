@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import Res from "../imgs/resume.png";
+import Res from "../imgs/techresume.png";
 import Download from "../imgs/download.svg";
-import ResPDF from "../imgs/resume.pdf";
+import ResPDF from "../imgs/techresume.pdf";
 
 function Resume() {
   return (

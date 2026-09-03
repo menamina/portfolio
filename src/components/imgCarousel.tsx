@@ -24,7 +24,6 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
     <div style={{ width: "100%" }}>
       <MultiCarousel
         swipeable={true}
-        showDots={true}
         infinite={true}
         transitionDuration={500}
         responsive={responsive}
