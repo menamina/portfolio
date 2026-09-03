@@ -39,13 +39,13 @@ function Contact() {
             <img src={Linkedin} alt="mena's linkedin" style={imgcss}></img>
             <Typography>Linkedin</Typography>
           </Link>
-          <Link
+          {/* <Link
             to="https://codingmuse.me"
             style={{ display: "flex", gap: "20px" }}
           >
             <img src={Blog} alt="" style={imgcss} />
             <Typography>my personal site</Typography>
-          </Link>
+          </Link> */}
         </Box>
       </Box>
     </Box>

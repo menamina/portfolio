@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import Header from "./imgs/flou.jpeg";
-import Me from "./imgs/me.jpeg";
+import Me from "./imgs/mena.png";
 
 import Choice from "./components/choice";
 import About from "./components/aboutme";
