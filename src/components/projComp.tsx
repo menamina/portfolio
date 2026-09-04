@@ -26,7 +26,6 @@ function Project({
     <Box
       sx={{
         display: "Flex",
-
         alignItems: "center",
         flexDirection: "column",
         gap: "30px",
@@ -68,7 +67,7 @@ function Project({
         </Box>
       </Box>
       {open && (
-        <Box>
+        <Box sx={{ width: "100%" }}>
           <Typography>{description1}</Typography>
           {description2 && <Typography>{description2}</Typography>}
           <Typography>Build:</Typography>
