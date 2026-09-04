@@ -52,7 +52,7 @@ function Project({
           sx={{
             transition: "transform 0.2s ease",
             "&:hover": {
-              transform: "scale(1.1)",
+              transform: "scale(1.2)",
             },
           }}
         >
@@ -67,10 +67,26 @@ function Project({
         </Box>
       </Box>
       {open && (
-        <Box sx={{ width: "100%" }}>
-          <Typography>{description1}</Typography>
-          {description2 && <Typography>{description2}</Typography>}
-          <Typography>Build:</Typography>
+        <Box
+          sx={{
+            width: "100%",
+          }}
+        >
+          <Box
+            sx={{
+              paddingBottom: "20px",
+            }}
+          >
+            <Typography>{description1}</Typography>
+            {description2 && <Typography>{description2}</Typography>}
+          </Box>
+          <Typography
+            sx={{
+              fontWeight: "bold",
+            }}
+          >
+            Build:
+          </Typography>
           <Box
             component="ul"
             sx={{
