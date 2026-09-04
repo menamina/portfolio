@@ -46,7 +46,7 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
               zIndex: 1,
             },
             "&:hover .overlay-magnify": {
-              opacity: 5,
+              opacity: 1,
             },
             cursor: "pointer",
           }}
@@ -82,8 +82,8 @@ function ImgCarousel({ imgs }: { imgs: string[] }) {
               alt="magnify"
               style={{
                 backgroundColor: "#80808033",
-                width: "100%",
-                height: "100%",
+                width: "60px",
+                height: "60px",
               }}
             />
           </Box>
