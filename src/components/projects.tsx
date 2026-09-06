@@ -30,9 +30,11 @@ const bunieIMGS = [
 const bunieTech = [
   "PostgreSQL used for relations between users, posts, followers, and product upload with Prisma as my ORM",
   "Unit tests with Jest",
-  "Authentication with Passport and other middleware",
-  "Typescript",
-  "Tanstack for caching infinite scrolling",
+  "Authentication with Passport and custom middleware",
+  "Multer for image uploads",
+  "Vite, React, and TypeScript front end",
+  "TanStack for caching",
+  "Infinite scrolling",
 ];
 
 // SAN \\
@@ -43,9 +45,9 @@ const sanTech = [
   "Reduced client report generation time from 30+ minutes to 3-5 seconds via pre-synced, pre-cleaned data and indexing of database",
   "Integrated Microsoft Azure AD SSO with role-based permissions",
   "Implemented complex SQL queries based on client's needs for month-to-month reporting, auditing/legal purposes, and grant appliction requirements",
-  "Developed React + TypeScript application with TanStack Query, Material-UI, for a robust, user friendly front end",
-  "Client-side CSV/Excel/ generation",
-  "Comprehensive audit trail logging all user actions with timestamps for compliance tracking",
+  "React, TypeScript, TanStack Query, Material-UI, for a robust, user friendly front end",
+  "Server-side CSV/Excel generation",
+  "Audit trail logging all user actions with timestamps for compliance tracking",
   "CI/CD deployment pipeline with GitHub Actions, and environment-based configs",
 ];
 
