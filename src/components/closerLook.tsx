@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import projects from "./closerLookProjectData";
 import ImgCarousel from "./imgCarousel";
+import ButtonOutline from "./buttonOutline";
 
 function CloserLookAtProject() {
   const { name } = useParams();
@@ -20,9 +21,7 @@ function CloserLookAtProject() {
       </div>
 
       {project.livePrev && (
-        <div>
-          <button>Live Preview</button>
-        </div>
+        <ButtonOutline text="Live Preview" url={project.livePrev} />
       )}
 
       <div>
