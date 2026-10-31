@@ -37,7 +37,7 @@ const projects = [
   },
 
   {
-    name: "Bunie - Cosmetic Tracker",
+    name: "Bunie 🐰 - Cosmetic Tracker",
     type: "personal",
     description:
       "A full-stack cosmetic usage tracking application with social features.",

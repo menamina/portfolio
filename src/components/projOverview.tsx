@@ -14,8 +14,8 @@ function ProjectOverview({ data }: { data: ProjectType }) {
         <img src="" alt="" />
       </div>
       <div className="projDescription">
-        <h3>{title}</h3>
-        <p>{desc}</p>
+        <h3>{data.title}</h3>
+        <p>{data.desc}</p>
       </div>
       <a href="">Take a closer look</a>
     </div>
