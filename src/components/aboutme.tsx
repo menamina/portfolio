@@ -13,9 +13,10 @@ function About() {
       <br></br>
       <Typography>
         I'm currently a Full Stack Software Engineer at{" "}
-        <a>Digital Aid Seattle</a>. I enjoy the process of figuring out how to
-        bring to life the needs of a business while meeting the needs of the end
-        users and clients.
+        <a>Digital Aid Seattle</a>, where I work with a team of project managers
+        and developers to provide digital solutions to non-profit companies. I
+        enjoy the process of figuring out how to bring to life the needs of a
+        business while meeting the needs of the end users and clients.
       </Typography>
     </Box>
   );
