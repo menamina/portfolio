@@ -1,27 +1,29 @@
-import { Box, Typography } from "@mui/material";
-import Email from "../imgs/email.svg";
-
-const imgcss = {
-  width: "50px",
-};
-
 function Contact() {
   return (
-    <Box>
-      <Typography>Email me!</Typography>
-
-      <Box
-        sx={{
-          display: "flex",
-          gap: "15px",
-          "& a:visited": { color: "black" },
-          "& a": { color: "black", textDecoration: "none" },
-        }}
-      >
-        <img src={Email} alt="email image" style={imgcss} />
-        <Typography>dayjacs03@gmail.com</Typography>
-      </Box>
-    </Box>
+    <section className="section contact" id="contact">
+      <span className="pill pill-light">Contact</span>
+      <div className="btn-row center">
+        <a href="mailto:dayjacs03@gmail.com" className="btn btn-white">
+          dayjacs03@gmail.com
+        </a>
+        <a
+          href="https://www.linkedin.com/in/damenajackson/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline-white"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/menamina"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline-white"
+        >
+          GitHub
+        </a>
+      </div>
+    </section>
   );
 }
 

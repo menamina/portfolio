@@ -3,10 +3,10 @@ import projects from "./projectData";
 import ImgCarousel from "./imgCarousel";
 import ButtonOutline from "./buttonOutline";
 
-function projectPage() {
+function ProjectPage() {
   const { name } = useParams();
   const project = projects.find(
-    (p) => p.name.toLowerCase().replace(/\s+/g, "-") === name?.toLowerCase(),
+    (p) => p.name.split(" ")[0].toLowerCase() === name?.toLowerCase(),
   );
 
   if (!project) {
@@ -52,4 +52,4 @@ function projectPage() {
   );
 }
 
-export default projectPage;
+export default ProjectPage;

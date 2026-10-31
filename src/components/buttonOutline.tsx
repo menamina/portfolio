@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Box } from "@mui/material";
 
 type BtnData = {
   image?: string;
@@ -19,7 +19,16 @@ function ButtonOutline(btnData: BtnData) {
 
   if (url) {
     return (
-      <Button href={url} target="_blank" rel="noopener noreferrer" variant="outlined" className={className}>
+      <Button
+        sx={{
+          border: "2px solid black",
+        }}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="outlined"
+        className={className}
+      >
         {image && <img src={image} alt="button icon" style={imageStyle} />}
         {text}
       </Button>
@@ -27,9 +36,17 @@ function ButtonOutline(btnData: BtnData) {
   }
 
   return (
-    <Button onClick={onClick} variant="outlined" className={className}>
+    <Button
+      sx={{
+        border: "2px solid black",
+        color: "black",
+      }}
+      onClick={onClick}
+      variant="outlined"
+      className={className}
+    >
       {image && <img src={image} alt="button icon" style={imageStyle} />}
-      {text}
+      {text && text}
     </Button>
   );
 }
