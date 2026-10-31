@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type ProjectType = {
   image: string;
   title: string;
@@ -7,19 +9,19 @@ type ProjectType = {
   livePrev: string;
 };
 
-function ProjectOverview({ data }: { data: ProjectType }) {
+function ProjectGrids({ data }: { data: ProjectType }) {
   return (
     <div className="ProjOverview">
       <div className="projectIMG">
-        <img src="" alt="" />
+        <img src={data.image} alt={data.title} />
       </div>
       <div className="projDescription">
         <h3>{data.title}</h3>
         <p>{data.desc}</p>
       </div>
-      <a href="">Take a closer look</a>
+      <Link to={`/portfolio/${data.route}`}>Take a closer look</Link>
     </div>
   );
 }
 
-export default ProjectOverview;
+export default ProjectGrids;

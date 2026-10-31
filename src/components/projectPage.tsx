@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import projects from "./closerLookProjectData";
+import projects from "./projectData";
 import ImgCarousel from "./imgCarousel";
 import ButtonOutline from "./buttonOutline";
 
-function CloserLookAtProject() {
+function projectPage() {
   const { name } = useParams();
   const project = projects.find(
     (p) => p.name.split("")[0].toLowerCase() === name?.toLowerCase(),
@@ -52,4 +52,4 @@ function CloserLookAtProject() {
   );
 }
 
-export default CloserLookAtProject;
+export default projectPage;

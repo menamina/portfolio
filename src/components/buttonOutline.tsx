@@ -1,18 +1,29 @@
+import { Button } from "@mui/material";
+
 type BtnData = {
   image?: string;
   text?: string;
   url?: string;
+  onClick?: () => void;
 };
 
 function ButtonOutline(btnData: BtnData) {
-  const { image, text, url } = btnData;
+  const { image, text, url, onClick } = btnData;
+
+  if (url) {
+    return (
+      <Button href={url} target="_blank" rel="noopener noreferrer" variant="outlined">
+        {image && <img src={image} alt="button icon" style={{ width: "20px", marginRight: "8px" }} />}
+        {text}
+      </Button>
+    );
+  }
+
   return (
-    <div>
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        {image && <img src={image} alt="button icon" />}
-        {text && <span>{text}</span>}
-      </a>
-    </div>
+    <Button onClick={onClick} variant="outlined">
+      {image && <img src={image} alt="button icon" style={{ width: "20px", marginRight: "8px" }} />}
+      {text}
+    </Button>
   );
 }
 
