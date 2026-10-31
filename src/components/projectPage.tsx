@@ -6,7 +6,7 @@ import ButtonOutline from "./buttonOutline";
 function projectPage() {
   const { name } = useParams();
   const project = projects.find(
-    (p) => p.name.split("")[0].toLowerCase() === name?.toLowerCase(),
+    (p) => p.name.toLowerCase().replace(/\s+/g, "-") === name?.toLowerCase(),
   );
 
   if (!project) {

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Index from "./index";
+import "./styles/home.css";
 import Home from "./components/home";
 import About from "./components/aboutme";
 import PortfolioComponent from "./components/portfolioComp";
@@ -15,6 +16,10 @@ const routes = createBrowserRouter([
     path: "/",
     element: <Index />,
     children: [
+      {
+        index: true,
+        element: <Home />,
+      },
       {
         path: "/home",
         element: <Home />,
