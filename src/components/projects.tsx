@@ -42,7 +42,7 @@ const bunieTech = [
 const sanIMGS = [CaseReport, Exports, Analytics, Audit];
 
 const sanTech = [
-  "Reduced client report generation time from 30+ minutes to 3-5 seconds via pre-synced, pre-cleaned data and indexing of database",
+  "Reduced client report generation time from 30+ minutes to 5 seconds - 2 minutes via pre-synced, pre-cleaned data and indexing of database",
   "Integrated Microsoft Azure AD SSO with role-based permissions",
   "Implemented complex SQL queries based on client's needs for month-to-month reporting, auditing/legal purposes, and grant appliction requirements",
   "React, TypeScript, TanStack Query, Material-UI, for a robust, user friendly front end",

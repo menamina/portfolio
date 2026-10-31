@@ -7,6 +7,12 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <Index />,
+    children: [
+      {
+        path: "/projects/:name",
+        element: <CloserLook />,
+      },
+    ],
   },
 ]);
 
