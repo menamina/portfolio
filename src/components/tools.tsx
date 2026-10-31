@@ -24,24 +24,24 @@ function Tools() {
   return (
     <section className="section tools-section">
       <p className="tools-title">Tools:</p>
-      <div className="tools">
-        {tools.map((t, i) => (
-          <div className="toolContainer">
-            <div
-              className="tool"
-              style={
-                {
-                  "--hover-color": cardColors[i % cardColors.length],
-                } as React.CSSProperties
-              }
-            >
-              <span className="toolUsed" key={t}>
-                {t}
-              </span>
+      <div className="tools-wrapper">
+        <div className="tools">
+          {[...tools, ...tools].map((t, i) => (
+            <div className="toolContainer" key={i}>
+              <div
+                className="tool"
+                // style={
+                //   {
+                //     "--hover-color": cardColors[i % cardColors.length],
+                //   } as React.CSSProperties
+                // }
+              >
+                <span className="toolUsed">{t}</span>
+              </div>
+              <span> &#10036;</span>
             </div>
-            <span> &#10036;</span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

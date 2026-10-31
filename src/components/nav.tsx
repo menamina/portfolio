@@ -6,11 +6,11 @@ import Linkedin from "../imgs/linkedin.svg";
 import Email from "../imgs/email.svg";
 
 const navOpts = [
-  { title: "Home", link: "/" },
-  { title: "About", link: "/about" },
-  { title: "Portfolio", link: "/portfolio" },
+  { title: "Home", link: "/#home" },
+  { title: "About", link: "/#about" },
+  { title: "Portfolio", link: "/#portfolio" },
   { title: "Resume", link: "/resume" },
-  { title: "Contact", link: "/contact" },
+  { title: "Contact", link: "/#contact" },
 ];
 
 const contact = [
@@ -48,22 +48,22 @@ function Nav() {
         >
           <nav className="openedNav" onClick={(e) => e.stopPropagation()}>
             <div className="webPages">
-              {navOpts.map((item) => (
-                <Link
-                  key={item.title}
-                  to={item.link}
+              {navOpts.map((opt) => (
+                <a
+                  key={opt.title}
+                  href={opt.link}
                   onClick={() => setOpen(false)}
                 >
-                  {item.title}
-                </Link>
+                  {opt.title}
+                </a>
               ))}
             </div>
             <div className="contactLinks">
-              {contact.map((item) => (
+              {contact.map((opt) => (
                 <ButtonOutline
-                  key={item.name}
-                  image={item.image}
-                  url={item.link}
+                  key={opt.name}
+                  image={opt.image}
+                  url={opt.link}
                 />
               ))}
             </div>
