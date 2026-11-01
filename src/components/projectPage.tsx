@@ -14,40 +14,49 @@ function ProjectPage() {
   }
 
   return (
-    <div>
-      <div>
-        <h1>{project.name}</h1>
-        <h3>{project.description}</h3>
+    <div className="projectContainer">
+      <div className="projectOverview">
+        <div>
+          <div className="left">
+            <h1>{project.name}</h1>
+            <h3>{project.description}</h3>
+            {project.livePrev && (
+              <ButtonOutline text="Live Preview" url={project.livePrev} />
+            )}
+            <div>
+              <div>
+                <h2>Purpose</h2>
+                <p>{project.about}</p>
+              </div>
+              <div>
+                <h3>
+                  {project.type === "work" ? "Hand off date:" : "End date:"}
+                </h3>
+                <div>{project.date}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="right">
+            <div style={{ paddingTop: "20px" }}>
+              <p style={{ fontWeight: "bold" }}>Summary:</p>
+              <ul
+                style={{
+                  listStyleType: "none",
+                }}
+              >
+                {project.summary.map((item, index) => (
+                  <li key={index}>☆ {item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {project.livePrev && (
-        <ButtonOutline text="Live Preview" url={project.livePrev} />
-      )}
-
-      <div>
-        <h2>About the project</h2>
-        <p>{project.about}</p>
+      <div className="projectPageCarousel">
+        <ImgCarousel imgs={project.images} />
       </div>
-
-      <div style={{ paddingTop: "20px" }}>
-        <p style={{ fontWeight: "bold" }}>Summary:</p>
-        <ul
-          style={{
-            listStyleType: "none",
-          }}
-        >
-          {project.summary.map((item, index) => (
-            <li key={index}>☆ {item}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div>
-        <div>{project.type === "work" ? "Hand off date:" : "End date:"}</div>
-        <div>{project.date}</div>
-      </div>
-
-      <ImgCarousel imgs={project.images} />
     </div>
   );
 }

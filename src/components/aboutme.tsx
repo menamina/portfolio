@@ -4,12 +4,12 @@ const experience = [
   {
     role: "Full Stack Software Engineer (Remote)",
     place: "Digital Aid Seattle",
-    when: "Current",
+    when: "2025 - Current",
   },
   {
-    role: "Self-taught Web Developer",
-    place: "HTML/CSS → full stack",
-    when: "Since 2025",
+    role: "Full Stack JavaScript Curriculum",
+    place: "The Odin Project",
+    when: "2025-2025",
   },
   {
     role: "Teacher",
@@ -22,7 +22,7 @@ function About() {
   return (
     <section className="section about" id="about">
       <div>
-        <span className="pill">About</span>
+        <span className="pill">&#10036; About</span>
         <h2>More about me</h2>
         <p>
           Over a year ago a friend introduced me to web development. What

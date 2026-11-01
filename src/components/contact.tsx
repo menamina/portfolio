@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <section className="section contact" id="contact">
-      <span className="pill pill-light">Contact</span>
+      <span className="pill pill-light">&#10036; Contact</span>
       <div className="btn-row center">
         <a href="mailto:dayjacs03@gmail.com" className="btn btn-white">
           dayjacs03@gmail.com
