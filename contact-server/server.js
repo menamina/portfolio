@@ -22,7 +22,7 @@ app.use(
 
 const transporter = nodemailer.createTransport({
   host: "smtp.zoho.com",
-  port: 587,
+  port: 25,
   secure: false,
   requireTLS: true,
   auth: {
