@@ -3,8 +3,8 @@
   --muted: #6b6b6b;
   --line: #ececec;
   --pastel-yellow: #fff4d6;
-  --pastel-orange: #ffe4cc;
-  --pastel-peach: #ffd9c0;
+  --pastel-orange: #fad1ae;
+  --pastel-peach: #ffe3d0;
   --pastel-cream: #fffbf0;
   --accent-orange: #ff9f5a;
   --accent-yellow: #ffc952;
@@ -59,6 +59,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 24px;
+  position: relative;
 }
 
 .home h1 {
@@ -130,7 +131,6 @@ a {
   text-decoration: none;
   transition:
     transform 0.2s ease,
-    background 0.2s ease,
     color 0.2s ease;
 }
 
@@ -438,19 +438,132 @@ a {
 
 /* ---------- Contact ---------- */
 .contact {
-  background: var(--pastel-peach);
+  background: var(--pastel-orange);
   color: var(--ink);
   border-radius: 48px;
   text-align: center;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   padding: 90px 24px;
   max-width: 1152px;
   border: 2px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 .contactLinks {
   display: inherit;
   gap: 13px;
+}
+
+/* ---------- Email form ---------- */
+
+.emailForm,
+.nameEmailForm,
+.subMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emailForm {
+  gap: 50px;
+  width: 90%;
+}
+
+.emailForm,
+.subMsg {
+  flex-direction: column;
+}
+
+.emailForm > div {
+  width: 100%;
+}
+
+.nameEmailForm {
+  justify-content: space-between;
+}
+
+.nameEmailForm > div,
+.subMsg > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.emailForm label {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.subMsg > div {
+  width: 100%;
+}
+
+.subMsg {
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.nameEmailForm input,
+.subMsg input,
+.subMsg textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: inherit;
+  font-size: 1.2rem;
+  line-height: 3;
+}
+
+.nameEmailForm input::placeholder,
+.subMsg input::placeholder,
+.subMsg textarea::placeholder {
+  color: #000000;
+}
+
+.nameEmailForm input:focus,
+.subMsg input:focus,
+.subMsg textarea:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(212, 57, 99);
+}
+
+.messageInput {
+  min-height: 200px;
+  padding-top: 12px;
+  font-family: inherit;
+}
+
+.sentStatus {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(112, 112, 112, 0.846);
+  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  gap: 30px;
+}
+
+.notSentMsg,
+.sentMsg {
+  width: 80%;
+}
+
+.sentStatus.error {
+  color: rgb(95, 26, 26);
+}
+
+.sentStatus.success {
+  color: rgb(26, 36, 95);
 }
 
 /* ---------- Nav ---------- */
@@ -569,7 +682,9 @@ a {
 @media (max-width: 810px) {
   .section {
     padding: 70px 16px;
+    max-width: 1152px;
   }
+
   .hero,
   .about,
   .works {
@@ -587,6 +702,14 @@ a {
   .contact-cta {
     margin: 0 16px 40px;
   }
+  .contact {
+    margin: 0 16px 40px;
+  }
+
+  .sentStatus {
+    text-align: left;
+  }
+
   .nav-links,
   .nav-cta {
     display: none;
