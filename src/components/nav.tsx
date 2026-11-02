@@ -10,7 +10,7 @@ const navOpts = [
   { title: "Home", link: "/#home" },
   { title: "About", link: "/#about" },
   { title: "Portfolio", link: "/#portfolio" },
-  { title: "Resume", link: "/resume" },
+  // { title: "Resume", link: "/resume" },
   { title: "Contact", link: "/#contact" },
 ];
 

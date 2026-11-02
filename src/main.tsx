@@ -6,7 +6,7 @@ import Index from "./index";
 import "./styles/home.css";
 
 import Home from "./components/home";
-import Resume from "./components/resume";
+// import Resume from "./components/resume";
 import ProjectPage from "./components/projectPage";
 
 const routes = createBrowserRouter([
@@ -23,10 +23,10 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
 
-      {
-        path: "/resume",
-        element: <Resume />,
-      },
+      // {
+      //   path: "/resume",
+      //   element: <Resume />,
+      // },
 
       {
         path: "/portfolio/:name",

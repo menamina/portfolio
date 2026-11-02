@@ -1,5 +1,5 @@
 import Me from "../imgs/mena.png";
-import Resume from "../imgs/techresume.pdf";
+// import Resume from "../imgs/techresume.pdf";
 
 function HomeOverview() {
   return (
@@ -17,9 +17,9 @@ function HomeOverview() {
           <a href="#portfolio" className="btn btn-dark">
             See My Work
           </a>
-          <a href={Resume} className="btn btn-light" download>
+          {/* <a href={Resume} className="btn btn-light" download>
             Download Resume
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="hero-img">
