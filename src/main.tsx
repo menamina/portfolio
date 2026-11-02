@@ -8,6 +8,7 @@ import "./styles/home.css";
 import Home from "./components/home";
 // import Resume from "./components/resume";
 import ProjectPage from "./components/projectPage";
+import NotFound from "./components/notfound";
 
 const routes = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const routes = createBrowserRouter([
       {
         path: "/portfolio/:name",
         element: <ProjectPage />,
+      },
+
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

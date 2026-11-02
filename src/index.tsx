@@ -4,9 +4,11 @@ import Footer from "./components/footer";
 
 function App() {
   return (
-    <div>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <Nav />
-      <Outlet></Outlet>
+      <Outlet />
       <Footer />
     </div>
   );

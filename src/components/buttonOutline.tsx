@@ -1,4 +1,4 @@
-import { Button, Box } from "@mui/material";
+import { Button } from "@mui/material";
 
 type BtnData = {
   image?: string;
