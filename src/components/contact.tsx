@@ -49,6 +49,13 @@ function Contact() {
   return (
     <section className="section contact" id="contact">
       <span className="pill pill-light">&#10036; Contact</span>
+      <span>
+        Please message me <a href="mailto:dayjacs03@gmail.com">here</a> for now
+      </span>
+      <span>
+        currently this form is not working due to backend issues that I need to
+        look into
+      </span>
 
       {/* // <div className="btn-row center">
       //   <a href="mailto:dayjacs03@gmail.com" className="btn btn-white">
