@@ -1,9 +1,7 @@
 import { useState } from "react";
 import ButtonOutline from "./buttonOutline";
-import "dotenv/config";
 
-const url =
-  process.env.VIEW === "prod" ? process.env.PROD_URL : process.env.DEV_URL;
+const url = import.meta.env.VITE_API_URL;
 
 function Contact() {
   const [emailForm, setEmailForm] = useState({
