@@ -4,6 +4,7 @@ import ButtonOutline from "./buttonOutline";
 import Github from "../imgs/github.svg";
 import Linkedin from "../imgs/linkedin.svg";
 import Email from "../imgs/email.svg";
+import Navigation from "../imgs/navigation.png";
 
 const navOpts = [
   { title: "Home", link: "/#home" },
@@ -36,7 +37,8 @@ function Nav() {
         <ButtonOutline
           className="menu-btn"
           onClick={() => setOpen(!open)}
-          text="x"
+          text={open ? "X" : undefined}
+          image={open ? undefined : Navigation}
         />
       </div>
       {open && (
