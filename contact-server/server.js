@@ -10,6 +10,7 @@ app.use(express.json());
 const allowedOrigins = [
   process.env.ALLOWED_ORIGIN,
   process.env.OTHER_ALLOWED_ORIGIN,
+  process.env.DEV_ALLOWED_ORIGIN,
 ].filter((origin) => origin !== undefined);
 
 app.use(
