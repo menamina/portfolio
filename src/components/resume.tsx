@@ -5,15 +5,19 @@ import ResPDF from "../imgs/techresume.pdf";
 
 function Resume() {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box
+      sx={{
+        width: "1200px",
+        justifySelf: "center",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
+          paddingTop: "30px",
+          justifyContent: "center",
+          alignItems: "center",
           flexDirection: "column",
-          "& a:hover": {
-            transform: "scale(1.1)",
-            boxShadow: "0px 20px 30px 0px gray",
-          },
         }}
       >
         <a
@@ -21,9 +25,13 @@ function Resume() {
           download="Damena_Jackson_Resume.pdf"
           style={{ alignSelf: "flex-end" }}
         >
-          <img style={{ width: "30px" }} src={Download} alt="download image" />
+          <img
+            style={{ width: "50px", marginRight: "15px" }}
+            src={Download}
+            alt="download image"
+          />
         </a>
-        <img style={{ width: "100%" }} src={Res} alt="mena's resume" />
+        <img style={{ width: "80%" }} src={Res} alt="mena's resume" />
       </Box>
     </Box>
   );
