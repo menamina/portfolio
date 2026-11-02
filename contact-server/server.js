@@ -16,6 +16,7 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: allowedOrigins,
+    credentials: true,
   }),
 );
 
@@ -32,6 +33,8 @@ const transporter = nodemailer.createTransport({
 app.post("/contact", async (req, res) => {
   const { name, email, subject, message, website } = req.body;
 
+  console.log("Received contact form:", { name, email, subject });
+
   if (website) return res.status(200).json({ ok: true });
 
   if (!name || !subject || !email || !message) {
@@ -39,6 +42,7 @@ app.post("/contact", async (req, res) => {
   }
 
   try {
+    console.log("Attempting to send email...");
     await transporter.sendMail({
       from: `"Portfolio Email" <${process.env.ZOHO_USER}>`,
       to: process.env.TO_EMAIL,
@@ -46,9 +50,10 @@ app.post("/contact", async (req, res) => {
       subject: `From ${name}: ${subject}`,
       text: `${message}`,
     });
-    res.json({ ok: true });
+    console.log("Email sent successfully");
+    res.status(200).json({ ok: true });
   } catch (err) {
-    console.error(err);
+    console.error("Email error:", err);
     res.status(500).json({ error: "Failed to send" });
   }
 });
