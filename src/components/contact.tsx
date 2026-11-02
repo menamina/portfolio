@@ -1,5 +1,9 @@
 import { useState } from "react";
 import ButtonOutline from "./buttonOutline";
+import "dotenv/config";
+
+const url =
+  process.env.VIEW === "prod" ? process.env.PROD_URL : process.env.DEV_URL;
 
 function Contact() {
   const [emailForm, setEmailForm] = useState({
@@ -24,7 +28,7 @@ function Contact() {
       }
     }
 
-    const res = await fetch(`http://localhost:5555/contact`, {
+    const res = await fetch(`${url}/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(emailForm),
