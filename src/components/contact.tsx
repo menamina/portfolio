@@ -173,7 +173,7 @@ function Contact() {
           />
         </div>
 
-        <ButtonOutline text="Submit" onClick={submitEmail} />
+        <ButtonOutline disabled={true} text="Submit" onClick={submitEmail} />
       </form>
     </section>
   );

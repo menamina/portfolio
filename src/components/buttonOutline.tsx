@@ -6,10 +6,11 @@ type BtnData = {
   url?: string;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 };
 
 function ButtonOutline(btnData: BtnData) {
-  const { image, text, url, onClick, className } = btnData;
+  const { image, text, url, onClick, className, disabled } = btnData;
 
   const imageStyle = {
     width: text ? "20px" : "24px",
@@ -28,6 +29,7 @@ function ButtonOutline(btnData: BtnData) {
         rel="noopener noreferrer"
         variant="outlined"
         className={className}
+        disabled={disabled}
       >
         {image && <img src={image} alt="button icon" style={imageStyle} />}
         {text}
@@ -44,6 +46,7 @@ function ButtonOutline(btnData: BtnData) {
       onClick={onClick}
       variant="outlined"
       className={className}
+      disabled={disabled}
     >
       {image && <img src={image} alt="button icon" style={imageStyle} />}
       {text && text}
