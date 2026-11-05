@@ -11,6 +11,7 @@ const tools = [
   "Azure AD",
   "GitHub Actions",
   "Vite",
+  "Claude Code / AI tools",
 ];
 
 const cardColors = [
