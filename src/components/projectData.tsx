@@ -34,6 +34,7 @@ const projects = [
     date: "October 2026",
     images: [caseReport, exports, analytics, audit],
     livePrev: null,
+    src: null,
   },
 
   {
@@ -55,6 +56,7 @@ const projects = [
     date: "August 2026",
     images: [feed, profile, set, pass, wrongpass, edit, comment, inven],
     livePrev: null,
+    src: "https://github.com/menamina/bunie",
   },
 ];
 

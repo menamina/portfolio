@@ -23,6 +23,7 @@ function ButtonOutline(btnData: BtnData) {
       <Button
         sx={{
           border: "2px solid black",
+          color: "black",
         }}
         href={url}
         target="_blank"

@@ -28,11 +28,27 @@ function ProjectPage() {
                 <h2>Purpose</h2>
                 <p>{project.about}</p>
               </div>
-              <div>
-                <h3>
-                  {project.type === "work" ? "Hand off date:" : "End date:"}
-                </h3>
-                <div>{project.date}</div>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "2rem",
+                }}
+              >
+                <div>
+                  <h3>
+                    {project.type === "work" ? "Hand off date:" : "End date:"}
+                  </h3>
+                  <div>{project.date}</div>
+                </div>
+                {project.src && (
+                  <div
+                    style={{
+                      alignSelf: "center",
+                    }}
+                  >
+                    <ButtonOutline text="Source" url={project.src} />
+                  </div>
+                )}
               </div>
             </div>
           </div>
